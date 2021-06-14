@@ -21,7 +21,7 @@ class GameObject(object):
 class Ball(GameObject):
     def __init__(self, canvas, x, y):
         self.radius = 10
-        self.direction = [1, -1]
+        self.direction = [-1, -1]
         self.speed = 10
         item = canvas.create_oval(x-self.radius, y-self.radius,
                                   x+self.radius, y+self.radius,
@@ -61,7 +61,7 @@ class Ball(GameObject):
 
 class Paddle(GameObject):
     def __init__(self, canvas, x, y):
-        self.width = 80
+        self.width = 100
         self.height = 10
         self.ball = None
         item = canvas.create_rectangle(x - self.width / 2,
