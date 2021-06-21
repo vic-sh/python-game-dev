@@ -96,13 +96,13 @@ class Brick(GameObject):
                                        fill=color, tags='brick')
         super(Brick, self).__init__(canvas, item)
 
-        def hit(self):
-            self.hits -= 1
-            if self.hits == 0:
-                self.delete()
-            else:
-                self.canvas.itemconfig(self.item,
-                                       fill=Brick.COLORS[self.hits])
+    def hit(self):
+        self.hits -= 1
+        if self.hits == 0:
+            self.delete()
+        else:
+            self.canvas.itemconfig(self.item,
+                                    fill=Brick.COLORS[self.hits])
 
 
 class Game(tk.Frame):
